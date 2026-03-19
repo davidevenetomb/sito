@@ -6,23 +6,23 @@ const calendlyUrl = 'https://calendly.com/davideveneto/caffe-strategico';
 
 const metodo = [
 	{
-		powerlifting: 'Precise program, no improvisation',
-		ads: 'I analyze the market before spending a single euro',
+		powerlifting: 'Before spending a euro',
+		ads: 'Every euro spent has a precise reason behind it.',
 		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 6 18 3-9h4"/></svg>',
 	},
 	{
-		powerlifting: 'Few lifts, perfect execution',
-		ads: 'Few channels, surgical funnel',
+		powerlifting: 'One channel, done right',
+		ads: "I don't spread the budget across everything. I focus it where it works.",
 		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
 	},
 	{
-		powerlifting: 'You measure every kilo, every week',
-		ads: 'I measure every lead, every day',
+		powerlifting: 'Numbers every day',
+		ads: 'Leads, costs, sales. You always know where you stand.',
 		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>',
 	},
 	{
-		powerlifting: 'Dedicated coach, not a crowded gym',
-		ads: '3 clients at a time. Not one more.',
+		powerlifting: '5 clients, not one more',
+		ads: 'Below that threshold I guarantee results. Above it, I don\'t.',
 		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
 	},
 ];
@@ -95,19 +95,18 @@ const caseStudies = [
 					<!-- Scarcity badge -->
 					<div class="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-amber/40 bg-amber/5">
 						<span class="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
-						<span class="text-amber text-sm font-semibold tracking-wide uppercase">1 spot available in March</span>
+						<span class="text-amber text-sm font-semibold tracking-wide uppercase">March: 1 spot out of 5 still available</span>
 					</div>
 
 					<h1 class="text-4xl md:text-6xl lg:text-7xl font-heading leading-[0.95] mb-6">
-						Your advertiser<br />
-						sends reports.<br />
-						<span class="text-red">I send clients.</span>
+						Running ads is easy.<br />
+						<span class="text-red">Turning them into revenue isn't.</span>
 					</h1>
 					<p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
-						I work with <span class="text-white font-semibold">3 companies at a time</span>. If you're looking for someone who sits by your side and delivers measurable results, let's talk.
+						I work with <span class="text-white font-semibold">five clients at a time</span>. No more, because to turn ads into revenue you need to know the business inside and out, the market, the clients, what happens after the lead.
 					</p>
 					<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
-						Book a strategy call
+						Book a call — 30 minutes
 					</a>
 				</div>
 			</div>
@@ -118,22 +117,26 @@ const caseStudies = [
 	<section class="py-12 md:py-16 bg-red relative">
 		<div class="max-w-6xl mx-auto px-6">
 			<h2 class="text-2xl md:text-3xl font-heading text-white text-center mb-8">Real results, not promises</h2>
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+			<div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 text-center">
 				<div>
-					<p class="text-white font-heading text-4xl md:text-5xl">100k+</p>
-					<p class="text-white/70 text-xs md:text-sm mt-1">monthly sales generated</p>
+					<p class="text-white font-heading text-4xl md:text-5xl">150k+</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">monthly sales, HVAC</p>
 				</div>
 				<div>
 					<p class="text-white font-heading text-4xl md:text-5xl">-74%</p>
-					<p class="text-white/70 text-xs md:text-sm mt-1">cost per contact</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">CPL from 50 to 13, dentistry</p>
 				</div>
 				<div>
 					<p class="text-white font-heading text-4xl md:text-5xl">ROAS 4x</p>
-					<p class="text-white/70 text-xs md:text-sm mt-1">return on investment</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">4 back for every euro spent, healthcare training</p>
 				</div>
 				<div>
-					<p class="text-white font-heading text-4xl md:text-5xl">1.47</p>
-					<p class="text-white/70 text-xs md:text-sm mt-1">cost per qualified lead</p>
+					<p class="text-white font-heading text-4xl md:text-5xl">1.47€</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">per qualified lead, 245 contacts, dentistry</p>
+				</div>
+				<div>
+					<p class="text-white font-heading text-4xl md:text-5xl">60</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">leads/month, less than €300 invested, pergolas</p>
 				</div>
 			</div>
 		</div>
@@ -148,7 +151,7 @@ const caseStudies = [
 					From the barbell <span class="text-red">to the budget</span>
 				</h2>
 				<p class="text-gray-300 text-lg leading-relaxed">
-					I spent years doing powerlifting. I learned that results are not promised, they are measured in kilos. Today I do the same thing with your ads.
+					I spent years under the barbell. Results don't come by chance, they come because you know exactly what you're doing and why. With ads it works the same way.
 				</p>
 			</div>
 
@@ -205,12 +208,12 @@ const caseStudies = [
 			</div>
 
 			<!-- Video testimonials -->
-			<div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
+			<div class="grid md:grid-cols-3 gap-4 md:gap-6 mb-8">
 				<div class="bg-black-card border border-gray-700/50 overflow-hidden">
 					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="AFIkuH3Bt5A">
 						<img
 							src="https://img.youtube.com/vi/AFIkuH3Bt5A/hqdefault.jpg"
-							alt="Testimonial Fabio M. - HVAC"
+							alt="Testimonial Fabio Sala - HVAC"
 							class="w-full h-full object-cover"
 							loading="lazy"
 						/>
@@ -219,7 +222,7 @@ const caseStudies = [
 						</div>
 					</div>
 					<div class="p-4">
-						<p class="text-white font-semibold">Fabio M.</p>
+						<p class="text-white font-semibold">Fabio Sala</p>
 						<p class="text-gray-500 text-sm">HVAC</p>
 					</div>
 				</div>
@@ -227,7 +230,7 @@ const caseStudies = [
 					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="0IArrlB_Q24">
 						<img
 							src="https://img.youtube.com/vi/0IArrlB_Q24/hqdefault.jpg"
-							alt="Testimonial Ciro G. - Garone Windows"
+							alt="Testimonial Ciro Grarone - Garone Windows & Doors"
 							class="w-full h-full object-cover"
 							loading="lazy"
 						/>
@@ -236,8 +239,25 @@ const caseStudies = [
 						</div>
 					</div>
 					<div class="p-4">
-						<p class="text-white font-semibold">Ciro G.</p>
+						<p class="text-white font-semibold">Ciro Grarone</p>
 						<p class="text-gray-500 text-sm">Garone Windows & Doors</p>
+					</div>
+				</div>
+				<div class="bg-black-card border border-gray-700/50 overflow-hidden">
+					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="tib8eZWDI4Q">
+						<img
+							src="https://img.youtube.com/vi/tib8eZWDI4Q/hqdefault.jpg"
+							alt="Testimonial Davide Filippini - Direct Response Designer"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
+						<div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors">
+							<svg class="w-16 h-16 text-red drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+						</div>
+					</div>
+					<div class="p-4">
+						<p class="text-white font-semibold">Davide Filippini</p>
+						<p class="text-gray-500 text-sm">Direct Response Designer</p>
 					</div>
 				</div>
 			</div>
@@ -262,11 +282,11 @@ const caseStudies = [
 			<!-- Text testimonials -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
 				{[
-					{ name: 'Ciro G.', role: 'Garone Windows & Doors', text: 'In 14 days we had so many contacts we had to halve the budget. Never happened before.' },
+					{ name: 'Ciro G.', role: 'Garone Windows & Doors', text: 'In 14 days we had so many contacts we had to halve the budget.' },
 					{ name: 'Fabio M.', role: 'HVAC', text: 'I went from 50 per contact to 13. Within two months I was selling over 100k in boilers per month.' },
-					{ name: 'Marco R.', role: 'Dental equipment', text: '245 qualified leads at less than 1.50 each. The webinar was a brilliant idea.' },
-					{ name: 'Laura S.', role: 'Healthcare training', text: 'We were selling the course at double the competitors\' price and getting a 4x return on every euro invested.' },
-					{ name: 'Andrea B.', role: 'Dentistry', text: 'Event sold out in 13 days at 30 per day. Davide immediately understood how to speak to dentists.' },
+					{ name: 'Gabriele Z.', role: 'Tax consulting', text: '245 qualified leads at less than 1.50 each. The webinar was a brilliant idea.' },
+					{ name: 'Edy S.', role: 'Healthcare training', text: 'We were selling the course at double the competitors\' price and getting a 4x return on every euro invested.' },
+					{ name: 'Davide S.', role: 'Dentistry', text: 'Event sold out in 13 days at 30 per day. Davide immediately understood how to speak to dentists.' },
 				].map((t) => (
 					<div class="p-5 md:p-6 bg-black-card border border-gray-700/50">
 						<div class="flex gap-0.5 mb-3">
@@ -290,14 +310,13 @@ const caseStudies = [
 		<div class="max-w-3xl mx-auto px-6 text-center relative">
 			<div class="w-16 h-1 bg-white/30 mb-6 mx-auto"></div>
 			<h2 class="text-3xl md:text-5xl font-heading mb-5 text-white">
-				I work with 3 companies at a time.<br />
-				One just opened up.
+				I work with a maximum of 5 companies. Now I have 4. One spot is open.
 			</h2>
 			<p class="text-white/80 text-lg mb-10">
-				If you want that spot, let's talk before someone else takes it. 30 minutes, zero commitment, all substance.
+				If you're interested, 30 minutes to see if it makes sense to work together.
 			</p>
 			<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary-inverted">
-				Book a strategy call
+				Book a call — 30 minutes
 			</a>
 		</div>
 	</section>
