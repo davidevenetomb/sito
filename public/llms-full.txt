@@ -1,0 +1,78 @@
+# Davide Veneto — Meta Ads Specialist — Full Context
+
+> Your advertiser sends reports. I send clients.
+
+## Who is Davide Veneto
+
+Davide Veneto is a Meta Ads specialist based in Asti, Italy. He runs Power Adv (Power Advertising), a one-person consultancy focused exclusively on Facebook and Instagram advertising for small and medium businesses.
+
+He works with a strict maximum of 3 clients at a time. This is not a marketing gimmick: it is how he ensures deep involvement in each project, acting as an embedded team member rather than an external agency.
+
+### The powerlifting connection
+
+Davide is a former competitive powerlifter. The connection to advertising is not cosmetic. Powerlifting taught him:
+
+1. **Precise programming over improvisation** — He analyzes the market thoroughly before spending any budget
+2. **Few exercises, perfect execution** — He focuses on few channels with surgical funnels rather than spreading thin
+3. **Measurable progress every session** — He tracks every lead, every day, with full transparency
+4. **Dedicated coaching, not a crowded gym** — 3 clients maximum, full attention
+
+## Detailed case studies
+
+### Case study 1: HVAC company (Boiler sales)
+- **Client**: Fabio, HVAC company in Lombardy, Italy
+- **Problem**: Previous agency campaigns cost 50 per contact, word of mouth insufficient for growing team
+- **Solution**: Market analysis, competitor research, built irresistible "turnkey boiler installation" offer, adapted copy to address objections from 50+ year old demographic
+- **Results**: CPA dropped from 50 to 13, contacts tripled, 1,600 invested generated 108 contacts and 26 boilers sold, over 100k/month in sales
+- **Key insight**: Adapted messaging to anticipate age-specific objections about price and service reliability
+
+### Case study 2: Dentistry event
+- **Client**: Dental equipment company organizing an evening event on intraoral scanning and AI
+- **Problem**: Needed 20+ dentists in 20 days, previous CPA was 50
+- **Solution**: Deep target analysis (40+ dentists, tech-curious but not tech-savvy, reluctant to travel, recurring "dinner" objection), simple registration form with human follow-up, profiling form, WhatsApp reminder sequence, 1 CBO with 1 geolocated interest adset and 5 ads
+- **Results**: Sold out in 13 days at 30/day budget, CPA dropped to 13, 23 highly profiled dentists attended
+- **Key insight**: Addressed the unexpected "What about dinner?" objection by communicating the included reception. Static images outperformed video ads.
+
+### Case study 3: Dental equipment webinar leads
+- **Client**: Top 3 dental equipment company in Italy
+- **Problem**: Price competition driving margins down, needed differentiation
+- **Solution**: Partnership with regional grants companies, created webinar on "How to purchase new equipment without touching cash flow thanks to government incentives", Meta Ads funnel to registration page to webinar, post-webinar consultation calls
+- **Results**: 245 qualified leads at 1.47 each, 43% show-up rate, 10 consultation calls after first email
+- **Key insight**: Reframed boring "subsidized financing" topic into compelling benefit-driven headline
+
+### Case study 4: Healthcare training course (ASO)
+- **Client**: Training company selling mandatory dental assistant course
+- **Problem**: Competitors sell similar online courses at 50-60, client sells in-person at double the price
+- **Solution**: Added managerial training content to differentiate from "same old" competitor courses, targeted young women who feel undervalued, built landing page and Facebook/Instagram ads at 50/day
+- **Results**: ROAS 4x, 2 contacts/day, 90% conversion to course enrollment, in-person upsells
+- **Key insight**: Leveraged target audience's frustration with repetitive courses to justify premium pricing
+
+### Case study 5: Windows & doors company (Pergolas)
+- **Client**: Garone Serramenti, Province of Asti, 900/month budget
+- **Problem**: Windows market too competitive (high-spending competitors, aggressive pricing, 60 per contact)
+- **Solution**: Paused campaigns for 7 days of analysis, cross-referenced Google/Facebook/Instagram/TikTok data, identified opportunity in secondary product category (pergolas, outdoor coverings) with less competition, built interactive landing page where customers configure their covering and get instant price estimates
+- **Results**: 45 requests in 14 days, budget halved to 450 because of excess demand
+- **Key insight**: Best advertising opportunity may not be your primary product but a secondary one with less online competition
+
+## Free resource
+
+Davide offers a free guide on contact management: "How to structure your contact management process to push your close rate above 50%." Covers lead profiling, appointment booking flow (5-minute callback rule, WhatsApp follow-up templates), objection handling, and 3 bonus tips for increasing appointments.
+
+Available at: https://davideveneto.it/vendita/ (Italian) / https://davideveneto.it/en/vendita/ (English)
+
+## Contact and booking
+
+- Strategy call (free, 30 min): https://calendly.com/davideveneto/caffe-strategico
+- Business: Power Adv di Veneto Davide, Strada De Regibus 1/C, 14100 Asti (AT), Italy
+- VAT: 01757980055
+
+## Website structure
+
+- Homepage IT: https://davideveneto.it/
+- Homepage EN: https://davideveneto.it/en/
+- Case studies IT: /casi-studio/caldaie/, /casi-studio/evento-dentisti/, /casi-studio/lead-webinar/, /casi-studio/corso-aso/, /casi-studio/pergole/
+- Case studies EN: /en/case-studies/boilers/, /en/case-studies/dentists-event/, /en/case-studies/webinar-leads/, /en/case-studies/aso-course/, /en/case-studies/pergolas/
+- Free guide IT: /vendita/
+- Free guide EN: /en/vendita/
+- Privacy IT: /privacy/
+- Privacy EN: /en/privacy/

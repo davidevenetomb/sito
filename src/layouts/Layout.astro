@@ -1,0 +1,154 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: 'it' | 'en';
+}
+
+const {
+  lang = 'it',
+  title = lang === 'it'
+    ? 'Davide Veneto — Il tuo advertiser ti manda report. Io ti mando clienti.'
+    : 'Davide Veneto — Your advertiser sends reports. I send clients.',
+  description = lang === 'it'
+    ? 'Seguo 3 aziende alla volta con campagne Meta Ads che portano clienti pronti a comprare. Ex powerlifter: stessa disciplina, risultati misurabili.'
+    : 'I work with 3 companies at a time running Meta Ads campaigns that bring ready-to-buy clients. Ex powerlifter: same discipline, measurable results.',
+} = Astro.props;
+
+const calendlyUrl = 'https://calendly.com/davideveneto/caffe-strategico';
+const base = '';
+const langBase = lang === 'en' ? `${base}/en` : base;
+const otherLang = lang === 'it' ? 'en' : 'it';
+const otherLangBase = lang === 'it' ? `${base}/en` : base;
+
+const nav = {
+  it: { method: 'Come lavoro', results: 'Risultati', guide: 'Guida gratuita', cta: 'Prenota una call', privacy: 'Privacy Policy', cookie: 'Questo sito usa cookie tecnici. Cliccando su un video YouTube, accetti i cookie di terze parti necessari alla riproduzione.', cookieBtn: 'Ho capito' },
+  en: { method: 'How I work', results: 'Results', guide: 'Free guide', cta: 'Book a call', privacy: 'Privacy Policy', cookie: 'This site uses technical cookies. By clicking a YouTube video, you accept the third-party cookies required for playback.', cookieBtn: 'Got it' },
+};
+
+const t = nav[lang];
+---
+
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="alternate" hreflang="it" href={`${base}/`} />
+		<link rel="alternate" hreflang="en" href={`${base}/en/`} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="fixed top-0 left-0 right-0 z-[60] bg-black/80 backdrop-blur-md border-b border-white/5">
+			<nav class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+				<a href={`${langBase}/`} class="font-heading tracking-wider inline-flex items-baseline">
+					<span class="text-red text-[1.65rem]">DAVIDE</span><span class="text-white text-2xl">VENETO</span>
+				</a>
+				<!-- Desktop nav -->
+				<div class="hidden md:flex items-center gap-8">
+					<a href={`${langBase}/#metodo`} class="text-gray-300 text-sm hover:text-white transition-colors">{t.method}</a>
+					<a href={`${langBase}/#risultati`} class="text-gray-300 text-sm hover:text-white transition-colors">{t.results}</a>
+					<a href={`${langBase}/vendita/`} class="text-gray-300 text-sm hover:text-white transition-colors">{t.guide}</a>
+					<a href={`${otherLangBase}/`} class="text-gray-500 text-xs font-semibold uppercase hover:text-white transition-colors border border-gray-700/50 px-2 py-1">
+						{otherLang.toUpperCase()}
+					</a>
+					<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-sm !py-2 !px-5 !text-base">
+						{t.cta}
+					</a>
+				</div>
+				<!-- Mobile hamburger -->
+				<button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						<path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</nav>
+			<!-- Mobile menu -->
+			<div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-black/95 backdrop-blur-md">
+				<div class="px-6 py-4 flex flex-col gap-4">
+					<a href={`${langBase}/#metodo`} class="text-gray-300 hover:text-white transition-colors">{t.method}</a>
+					<a href={`${langBase}/#risultati`} class="text-gray-300 hover:text-white transition-colors">{t.results}</a>
+					<a href={`${langBase}/vendita/`} class="text-gray-300 hover:text-white transition-colors">{t.guide}</a>
+					<a href={`${otherLangBase}/`} class="text-gray-500 text-sm hover:text-white transition-colors">
+						{otherLang === 'en' ? 'English' : 'Italiano'}
+					</a>
+					<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-center text-sm !py-2">
+						{t.cta}
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<slot />
+
+		<!-- COOKIE BANNER -->
+		<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[70] bg-black-card border-t border-gray-700/50 px-6 py-4 hidden">
+			<div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+				<p class="text-gray-300 text-sm flex-1">
+					{t.cookie}
+					<a href={`${langBase}/privacy/`} class="text-red hover:text-red-glow underline">{t.privacy}</a>
+				</p>
+				<button id="cookie-accept" class="text-white text-sm font-semibold bg-red hover:bg-red-dark transition-colors px-4 py-2 shrink-0">
+					{t.cookieBtn}
+				</button>
+			</div>
+		</div>
+
+		<script>
+			(function() {
+				const KEY = 'powerads_consent';
+				if (!localStorage.getItem(KEY)) {
+					document.getElementById('cookie-banner')?.classList.remove('hidden');
+				}
+				document.getElementById('cookie-accept')?.addEventListener('click', () => {
+					localStorage.setItem(KEY, 'ok');
+					document.getElementById('cookie-banner')?.classList.add('hidden');
+				});
+			})();
+		</script>
+
+		<script>
+			const btn = document.getElementById('mobile-menu-btn');
+			const menu = document.getElementById('mobile-menu');
+			const hamburger = document.getElementById('hamburger-icon');
+			const closeIcon = document.getElementById('close-icon');
+			btn?.addEventListener('click', () => {
+				menu?.classList.toggle('hidden');
+				hamburger?.classList.toggle('hidden');
+				closeIcon?.classList.toggle('hidden');
+			});
+			menu?.querySelectorAll('a').forEach(link => {
+				link.addEventListener('click', () => {
+					menu?.classList.add('hidden');
+					hamburger?.classList.remove('hidden');
+					closeIcon?.classList.add('hidden');
+				});
+			});
+		</script>
+
+		<!-- Language auto-detect (first visit only) -->
+		<script define:vars={{ lang }}>
+			(function() {
+				const KEY = 'powerads_lang_set';
+				if (localStorage.getItem(KEY)) return;
+				localStorage.setItem(KEY, '1');
+				const browserLang = navigator.language?.slice(0, 2) || 'it';
+				const base = '';
+				if (browserLang !== 'it' && lang === 'it') {
+					window.location.replace(base + '/en/');
+				} else if (browserLang === 'it' && lang === 'en') {
+					window.location.replace(base + '/');
+				}
+			})();
+		</script>
+	</body>
+</html>
