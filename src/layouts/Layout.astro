@@ -10,11 +10,11 @@ interface Props {
 const {
   lang = 'it',
   title = lang === 'it'
-    ? 'Davide Veneto — Il tuo advertiser ti manda report. Io ti mando clienti.'
-    : 'Davide Veneto — Your advertiser sends reports. I send clients.',
+    ? 'Davide Veneto | Esperto Lead Generation Meta Ads'
+    : 'Davide Veneto | Meta Ads Lead Generation Expert',
   description = lang === 'it'
-    ? 'Seguo 3 aziende alla volta con campagne Meta Ads che portano clienti pronti a comprare. Ex powerlifter: stessa disciplina, risultati misurabili.'
-    : 'I work with 3 companies at a time running Meta Ads campaigns that bring ready-to-buy clients. Ex powerlifter: same discipline, measurable results.',
+    ? 'Davide Veneto — Specialista in lead generation con Meta Ads. Seguo 5 aziende alla volta e trasformo le ads in fatturato reale. Prenota una call gratuita.'
+    : 'Davide Veneto — Meta Ads lead generation specialist. I work with 5 companies at a time and turn ads into real revenue. Book a free call.',
 } = Astro.props;
 
 const calendlyUrl = 'https://app.reclaim.ai/m/davide-veneto/call-conoscitiva';
@@ -38,6 +38,11 @@ const t = nav[lang];
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:locale" content={lang === 'it' ? 'it_IT' : 'en_US'} />
+		<link rel="canonical" href={lang === 'it' ? 'https://davideveneto.com/' : 'https://davideveneto.com/en/'} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />

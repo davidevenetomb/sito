@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import davidePhoto from '../../assets/photos/davide-veneto-marketing-mezzo-busto.png';
+import leadGenPhoto from '../../assets/photos/davide-veneto-lead-generation.png';
 
 const calendlyUrl = 'https://app.reclaim.ai/m/davide-veneto/call-conoscitiva';
 
@@ -80,7 +81,7 @@ const caseStudies = [
 		<div class="w-full max-w-6xl mx-auto px-6">
 			<div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-end">
 				<!-- Photo -->
-				<div class="flex justify-end items-end md:order-2 self-end">
+				<div class="hidden md:flex justify-end items-end md:order-2 self-end">
 					<img
 						src={(davidePhoto as any).src ?? davidePhoto}
 						alt="Davide Veneto - Founder of Powerads"
@@ -89,7 +90,7 @@ const caseStudies = [
 					/>
 				</div>
 				<!-- Copy -->
-				<div class="md:order-1 text-center md:text-left pb-12 md:pb-16">
+				<div class="md:order-1 text-center md:text-left md:pb-16">
 					<!-- Scarcity badge -->
 					<div class="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-amber/40 bg-amber/5">
 						<span class="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
@@ -109,12 +110,21 @@ const caseStudies = [
 				</div>
 			</div>
 		</div>
+		<!-- Lead gen image — mobile only -->
+		<div class="md:hidden w-full mt-6">
+			<img
+				src={(leadGenPhoto as any).src ?? leadGenPhoto}
+				alt="Davide Veneto Lead Generation"
+				class="w-full object-contain"
+				loading="lazy"
+			/>
+		</div>
 	</section>
 
 	<!-- NUMBERS BAR -->
 	<section class="py-12 md:py-16 bg-red relative">
 		<div class="max-w-6xl mx-auto px-6">
-			<h2 class="text-2xl md:text-3xl font-heading text-white text-center mb-8">Real results, not promises</h2>
+			<h2 class="text-2xl md:text-3xl font-heading text-white text-center mb-8">Some results</h2>
 			<div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 text-center">
 				<div>
 					<p class="text-white font-heading text-4xl md:text-5xl">150k+</p>
