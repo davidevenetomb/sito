@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import davidePhoto from '../assets/photos/davide-veneto-marketing-mezzo-busto.png';
+import leadGenPhoto from '../assets/photos/davide-veneto-lead-generation.png';
 
 const calendlyUrl = 'https://app.reclaim.ai/m/davide-veneto/call-conoscitiva';
 
@@ -89,7 +90,7 @@ const caseStudies = [
 					/>
 				</div>
 				<!-- Copy -->
-				<div class="md:order-1 text-center md:text-left pb-12 md:pb-16">
+				<div class="md:order-1 text-center md:text-left md:pb-16">
 					<!-- Scarsità badge -->
 					<div class="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-amber/40 bg-amber/5">
 						<span class="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
@@ -108,6 +109,15 @@ const caseStudies = [
 					</a>
 				</div>
 			</div>
+		</div>
+		<!-- Immagine lead gen — solo mobile, attaccata al banner rosso -->
+		<div class="md:hidden w-full mt-6">
+			<img
+				src={(leadGenPhoto as any).src ?? leadGenPhoto}
+				alt="Davide Veneto Lead Generation"
+				class="w-full object-contain"
+				loading="lazy"
+			/>
 		</div>
 	</section>
 
