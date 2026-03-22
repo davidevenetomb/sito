@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import davidePhoto from '../assets/photos/Davide Veneto.jpeg';
+import davidePhoto from '../assets/photos/davide-veneto-marketing-mezzo-busto.png';
 
 const calendlyUrl = 'https://app.reclaim.ai/m/davide-veneto/call-conoscitiva';
 
@@ -80,15 +80,13 @@ const caseStudies = [
 		<div class="w-full max-w-6xl mx-auto px-6">
 			<div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-center">
 				<!-- Foto -->
-				<div class="flex justify-center md:order-2">
-					<div class="w-52 h-52 md:w-80 md:h-80 rounded-full overflow-hidden relative ring-2 ring-red/30 ring-offset-4 ring-offset-black">
-						<img
-							src={(davidePhoto as any).src ?? davidePhoto}
-							alt="Davide Veneto - Fondatore di Powerads"
-							class="w-full h-full object-cover object-[center_20%]"
-							fetchpriority="high"
-						/>
-					</div>
+				<div class="flex justify-end items-end md:order-2 self-end">
+					<img
+						src={(davidePhoto as any).src ?? davidePhoto}
+						alt="Davide Veneto - Fondatore di Powerads"
+						class="w-64 md:w-96 lg:w-[28rem] object-contain object-bottom drop-shadow-2xl"
+						fetchpriority="high"
+					/>
 				</div>
 				<!-- Copy -->
 				<div class="md:order-1 text-center md:text-left">
