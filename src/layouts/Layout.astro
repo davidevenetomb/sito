@@ -49,6 +49,28 @@ const t = nav[lang];
 		<link rel="alternate" hreflang="it" href={`${base}/`} />
 		<link rel="alternate" hreflang="en" href={`${base}/en/`} />
 		<title>{title}</title>
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Davide Veneto",
+		"url": "https://davideveneto.com",
+		"jobTitle": lang === 'it' ? "Esperto di Lead Generation con Meta Ads" : "Meta Ads Lead Generation Expert",
+		"description": lang === 'it'
+			? "Specialista in lead generation con Meta Ads. Seguo 5 aziende alla volta e trasformo le ads in fatturato reale."
+			: "Meta Ads lead generation specialist. I work with 5 companies at a time and turn ads into real revenue.",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Strada De Regibus 1/C",
+			"addressLocality": "Asti",
+			"postalCode": "14100",
+			"addressCountry": "IT"
+		},
+		"sameAs": [
+			"https://www.linkedin.com/in/davideveneto",
+			"https://www.facebook.com/davideveneto"
+		],
+		"knowsAbout": ["Meta Ads", "Lead Generation", "Facebook Ads", "Marketing a risposta diretta"]
+	})} />
 	</head>
 	<body>
 		<!-- HEADER -->
