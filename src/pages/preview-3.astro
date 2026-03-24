@@ -1,0 +1,346 @@
+---
+import Layout from '../layouts/Layout.astro';
+import davidePhoto from '../assets/photos/davide-veneto-marketing-mezzo-busto.png';
+import leadGenPhoto from '../assets/photos/davide-veneto-lead-generation.png';
+
+const calendlyUrl = 'https://app.reclaim.ai/m/davide-veneto/call-conoscitiva';
+
+const metodo = [
+	{
+		powerlifting: 'Prima di spendere un euro',
+		ads: 'Ogni euro speso ha un motivo preciso dietro.',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 6 18 3-9h4"/></svg>',
+	},
+	{
+		powerlifting: 'Un canale, fatto bene',
+		ads: 'Non distribuisco il budget su tutto. Lo concentro dove funziona.',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+	},
+	{
+		powerlifting: 'Numeri ogni giorno',
+		ads: 'Lead, costi, vendite. Sai sempre dove sei.',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>',
+	},
+	{
+		powerlifting: '5 clienti, non uno di più',
+		ads: 'Sotto quella soglia garantisco i risultati. Sopra no.',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+	},
+];
+
+const caseStudies = [
+	{
+		number: '100k+/mese',
+		label: 'di vendite generate',
+		sector: 'Termoidraulica',
+		detail: 'CPA da 50€ a 13€ con meno di 2.500€ investiti',
+		href: '/casi-studio/caldaie/',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"/><path d="M8 8a4 4 0 108 0"/><circle cx="12" cy="16" r="6"/><path d="M12 14v4"/><path d="M10 16h4"/></svg>',
+	},
+	{
+		number: 'CPA -74%',
+		label: 'costo per contatto',
+		sector: 'Odontoiatria',
+		detail: 'Evento sold out in 13 giorni con 30€ al giorno',
+		href: '/casi-studio/evento-dentisti/',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 3 7.5 2 5.5 4s-1.5 5.5 0 9c1 2.5 1.5 5 2 7 .3 1 1.3 1 1.5 0 .5-2 1-3.5 3-3.5s2.5 1.5 3 3.5c.2 1 1.2 1 1.5 0 .5-2 1-4.5 2-7 1.5-3.5 2-7 0-9S13.5 3 12 5.5z"/></svg>',
+	},
+	{
+		number: '245 lead',
+		label: 'a 1,47€ l\'uno',
+		sector: 'Attrezzature dentali',
+		detail: '43% di show-up rate al webinar',
+		href: '/casi-studio/lead-webinar/',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>',
+	},
+	{
+		number: 'ROAS 4x',
+		label: '4€ per ogni 1€ investito',
+		sector: 'Formazione sanitaria',
+		detail: 'Corso venduto al doppio dei competitor',
+		href: '/casi-studio/corso-aso/',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10l-10-6L2 10l10 6 10-6z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/><path d="M22 10v6"/></svg>',
+	},
+	{
+		number: '45 richieste',
+		label: 'in 14 giorni',
+		sector: 'Serramenti',
+		detail: 'Budget dimezzato: troppi contatti',
+		href: '/casi-studio/pergole/',
+		icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="2" y1="12" x2="22" y2="12"/></svg>',
+	},
+];
+
+---
+
+<Layout>
+	<!-- HERO -->
+	<section class="relative overflow-hidden pt-28 pb-0 md:pt-36">
+		<div class="absolute top-0 right-0 w-1/3 h-full bg-red opacity-[0.03] skew-x-[-12deg] translate-x-1/4"></div>
+		<!-- Overlay 3: gradiente radiale rosso dietro il testo -->
+		<div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 70% at 25% 50%, rgba(220,38,38,0.12) 0%, transparent 70%);"></div>
+
+		<div class="w-full max-w-6xl mx-auto px-6">
+			<div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-end">
+				<!-- Foto -->
+				<div class="hidden md:flex justify-end items-end md:order-2 self-end">
+					<img
+						src={(davidePhoto as any).src ?? davidePhoto}
+						alt="Davide Veneto - Fondatore di Powerads"
+						class="w-80 md:w-[32rem] lg:w-[42rem] object-contain object-bottom drop-shadow-2xl"
+						fetchpriority="high"
+					/>
+				</div>
+				<!-- Copy -->
+				<div class="md:order-1 text-center md:text-left md:pb-16">
+					<!-- Scarsità badge -->
+					<div class="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-amber/40 bg-amber/5">
+						<span class="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
+						<span class="text-amber text-sm font-semibold tracking-wide uppercase">Marzo: 1 posto su 5 ancora libero</span>
+					</div>
+
+					<h1 class="text-4xl md:text-6xl lg:text-7xl font-heading leading-[0.95] mb-6">
+						Fare ads è facile.<br />
+						<span class="text-red">Farle diventare fatturato no.</span>
+					</h1>
+					<p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+						Lavoro con <span class="text-white font-semibold">cinque clienti alla volta</span>. Non di più, perché per trasformare le ads in fatturato devi conoscere l'azienda dentro e fuori, il mercato, i clienti, cosa succede dopo il lead.
+					</p>
+					<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+						Prenota una call — 30 minuti
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Immagine lead gen — solo mobile, attaccata al banner rosso -->
+		<div class="md:hidden w-full mt-3">
+			<img
+				src={(leadGenPhoto as any).src ?? leadGenPhoto}
+				alt="Davide Veneto Lead Generation"
+				class="w-full object-contain"
+				loading="lazy"
+			/>
+		</div>
+	</section>
+
+	<!-- BARRA NUMERI -->
+	<section class="py-12 md:py-16 bg-red relative">
+		<div class="max-w-6xl mx-auto px-6">
+			<h2 class="text-2xl md:text-3xl font-heading text-white text-center mb-8">Alcuni risultati</h2>
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+				<div>
+					<p class="text-white font-heading text-4xl md:text-5xl">100k+</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">vendite generate al mese</p>
+				</div>
+				<div>
+					<p class="text-white font-heading text-4xl md:text-5xl">-74%</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">costo per contatto</p>
+				</div>
+				<div>
+					<p class="text-white font-heading text-4xl md:text-5xl">ROAS 4x</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">ritorno sull'investimento</p>
+				</div>
+				<div>
+					<p class="text-white font-heading text-4xl md:text-5xl">1,47€</p>
+					<p class="text-white/70 text-xs md:text-sm mt-1">costo per lead qualificato</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- IL METODO — Dal bilanciere al budget -->
+	<section id="metodo" class="py-16 md:py-24 relative scroll-mt-24">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="max-w-3xl mb-12">
+				<div class="section-divider mb-6"></div>
+				<h2 class="text-3xl md:text-5xl font-heading mb-4">
+					Dal bilanciere <span class="text-red">al budget</span>
+				</h2>
+				<p class="text-gray-300 text-lg leading-relaxed">
+					Ho passato anni sotto il bilanciere. I risultati non arrivano per caso, arrivano perché sai esattamente cosa stai facendo e perché. Con le ads funziona uguale.
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 gap-4 md:gap-6">
+				{metodo.map((item) => (
+					<div class="p-5 md:p-6 bg-black-card border border-gray-700/50 group hover:border-red/30 transition-colors">
+						<div class="flex items-start gap-4">
+							<span class="w-8 h-8 md:w-10 md:h-10 text-red shrink-0 mt-0.5" set:html={item.icon} />
+							<div>
+								<p class="text-gray-500 text-sm mb-1">{item.powerlifting}</p>
+								<p class="text-white text-base md:text-lg font-semibold">{item.ads}</p>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- PROVE — Casi studio -->
+	<section id="risultati" class="py-16 md:py-24 bg-black-light border-y border-white/5 relative scroll-mt-24">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-10">
+				<div class="section-divider mb-6 mx-auto"></div>
+				<h2 class="text-3xl md:text-5xl font-heading">
+					I numeri <span class="text-red">parlano.</span>
+				</h2>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+				{caseStudies.map((cs) => (
+					<a href={cs.href} class="block p-5 md:p-8 bg-black border border-gray-700/50 hover:border-red/30 transition-colors group">
+						<span class="inline-block w-8 h-8 md:w-10 md:h-10 text-red mb-3 opacity-60" set:html={cs.icon} />
+						<p class="text-red font-heading text-3xl md:text-5xl mb-1">{cs.number}</p>
+						<p class="text-gray-400 text-sm mb-3">{cs.label}</p>
+						<p class="text-white font-semibold text-base mb-1">{cs.sector}</p>
+						<p class="text-gray-300 text-sm mb-4">{cs.detail}</p>
+						<span class="text-amber text-sm font-semibold tracking-wider uppercase group-hover:tracking-widest transition-all">
+							Leggi il caso studio
+							<svg class="inline w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+						</span>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- TESTIMONIANZE -->
+	<section class="py-16 md:py-24 relative">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-10">
+				<div class="section-divider mb-6 mx-auto"></div>
+				<h2 class="text-3xl md:text-5xl font-heading">Cosa dicono <span class="text-red">i clienti</span></h2>
+			</div>
+
+			<!-- Video testimonianze -->
+			<div class="grid md:grid-cols-3 gap-4 md:gap-6 mb-8">
+				<div class="bg-black-card border border-gray-700/50 overflow-hidden">
+					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="AFIkuH3Bt5A">
+						<img
+							src="https://img.youtube.com/vi/AFIkuH3Bt5A/hqdefault.jpg"
+							alt="Testimonianza Fabio Sala - Termoidraulica"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
+						<div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors">
+							<svg class="w-16 h-16 text-red drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+						</div>
+					</div>
+					<div class="p-4">
+						<p class="text-white font-semibold">Fabio Sala</p>
+						<p class="text-gray-500 text-sm">Termoidraulica</p>
+					</div>
+				</div>
+				<div class="bg-black-card border border-gray-700/50 overflow-hidden">
+					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="0IArrlB_Q24">
+						<img
+							src="https://img.youtube.com/vi/0IArrlB_Q24/hqdefault.jpg"
+							alt="Testimonianza Ciro Grarone - Garone Serramenti"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
+						<div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors">
+							<svg class="w-16 h-16 text-red drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+						</div>
+					</div>
+					<div class="p-4">
+						<p class="text-white font-semibold">Ciro Grarone</p>
+						<p class="text-gray-500 text-sm">Garone Serramenti</p>
+					</div>
+				</div>
+				<div class="bg-black-card border border-gray-700/50 overflow-hidden">
+					<div class="aspect-video relative cursor-pointer yt-lazy" data-video-id="tib8eZWDI4Q">
+						<img
+							src="https://img.youtube.com/vi/tib8eZWDI4Q/hqdefault.jpg"
+							alt="Testimonianza Davide Filippini - Designer a risposta diretta"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
+						<div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors">
+							<svg class="w-16 h-16 text-red drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+						</div>
+					</div>
+					<div class="p-4">
+						<p class="text-white font-semibold">Davide Filippini</p>
+						<p class="text-gray-500 text-sm">Designer a risposta diretta</p>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				document.querySelectorAll('.yt-lazy').forEach(el => {
+					el.addEventListener('click', () => {
+						const id = el.getAttribute('data-video-id');
+						if (!id) return;
+						const iframe = document.createElement('iframe');
+						iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+						iframe.className = 'w-full h-full absolute inset-0';
+						iframe.setAttribute('frameborder', '0');
+						iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+						iframe.setAttribute('allowfullscreen', '');
+						el.innerHTML = '';
+						el.appendChild(iframe);
+					});
+				});
+			</script>
+
+			<!-- Testimonianze testuali -->
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+				{[
+					{ name: 'Ciro G.', role: 'Garone Serramenti', text: 'In 14 giorni avevamo talmente tanti contatti che abbiamo dovuto dimezzare il budget.' },
+					{ name: 'Fabio M.', role: 'Termoidraulica', text: 'Sono passato da 50€ a contatto a 13€. In due mesi vendevo oltre 100k di caldaie al mese.' },
+					{ name: 'Gabriele Z.', role: 'Consulenza fiscale', text: '245 lead profilati a meno di 1,50€ l\'uno. Il webinar è stato un\'idea geniale.' },
+					{ name: 'Edy S.', role: 'Formazione sanitaria', text: 'Vendevamo il corso al doppio dei competitor e avevamo un ritorno di 4€ per ogni euro investito.' },
+					{ name: 'Davide S.', role: 'Odontoiatria', text: 'Evento sold out in 13 giorni con 30€ al giorno. Davide ha capito subito come parlare ai dentisti.' },
+				].map((t) => (
+					<div class="p-5 md:p-6 bg-black-card border border-gray-700/50">
+						<div class="flex gap-0.5 mb-3">
+							{Array.from({ length: 5 }).map(() => (
+								<svg class="w-4 h-4 text-amber fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+							))}
+						</div>
+						<p class="text-gray-300 text-sm leading-relaxed mb-4">"{t.text}"</p>
+						<div>
+							<p class="text-white font-semibold text-sm">{t.name}</p>
+							<p class="text-gray-500 text-xs">{t.role}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA FINALE — Scarsità -->
+	<section class="py-16 md:py-24 bg-red relative overflow-hidden">
+		<div class="max-w-3xl mx-auto px-6 text-center relative">
+			<div class="w-16 h-1 bg-white/30 mb-6 mx-auto"></div>
+			<h2 class="text-3xl md:text-5xl font-heading mb-5 text-white">
+				Seguo massimo 5 aziende.<br />
+				Ora ne ho 4.<br />
+				Un posto è aperto.
+			</h2>
+			<p class="text-white/80 text-lg mb-10">
+				Se ti interessa, 30 minuti per capire se ha senso lavorare insieme.
+			</p>
+			<a href={calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn-primary-inverted">
+				Prenota una call — 30 minuti
+			</a>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="py-8 border-t border-gray-700/30">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-center md:text-left">
+				<div>
+					<p class="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Power Adv di Veneto Davide</p>
+					<p class="text-gray-500 text-xs mt-1">Strada De Regibus 1/C, 14100 Asti (AT) · P.IVA 01757980055</p>
+				</div>
+				<div>
+					<a href="/privacy/" class="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</Layout>
