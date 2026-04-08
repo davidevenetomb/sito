@@ -94,7 +94,13 @@ const caseStudies = [
 					<!-- Scarsità badge -->
 					<div class="inline-flex items-center gap-2 mb-6 px-4 py-2 border border-amber/40 bg-amber/5">
 						<span class="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
-						<span class="text-amber text-sm font-semibold tracking-wide uppercase">Marzo: 1 posto su 5 ancora libero</span>
+						<span id="scarcity-badge" class="text-amber text-sm font-semibold tracking-wide uppercase">Marzo: 1 posto su 5 ancora libero</span>
+					<script>
+						const mesi = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+						const mese = mesi[new Date().getMonth()];
+						const el = document.getElementById('scarcity-badge');
+						if (el) el.textContent = mese + ': 1 posto su 5 ancora libero';
+					</script>
 					</div>
 
 					<h1 class="text-4xl md:text-6xl lg:text-7xl font-heading leading-[0.95] mb-6">
