@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const PASSWORD = 'casistudioprivati';
+---
+
+<Layout title="Casi Studio Privati | Davide Veneto" description="Casi studio riservati — accessibili solo su invito.">
+
+	<!-- LOCKED -->
+	<div id="locked" class="min-h-screen flex items-center justify-center px-6">
+		<div class="max-w-md w-full">
+			<div class="section-divider mb-8"></div>
+			<h1 class="text-3xl md:text-4xl font-heading mb-3">Casi Studio <span class="text-red">Privati</span></h1>
+			<p class="text-gray-400 text-lg mb-8">Questa sezione è riservata. Inserisci la password per accedere.</p>
+			<form id="pwd-form" class="flex flex-col gap-4">
+				<input
+					id="pwd-input"
+					type="password"
+					placeholder="Password"
+					class="bg-black-card border border-gray-700/50 text-white px-4 py-3 text-base focus:outline-none focus:border-red/50 w-full"
+				/>
+				<p id="pwd-error" class="text-red text-sm hidden">Password errata. Riprova.</p>
+				<button type="submit" class="btn-primary w-full text-center">Accedi</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- CONTENT -->
+	<div id="content" class="hidden">
+		<section class="pt-32 pb-20 md:pt-40 md:pb-28">
+			<div class="max-w-3xl mx-auto px-6">
+				<a href="/" class="text-red font-heading text-sm tracking-[0.2em] mb-6 inline-block hover:text-red-glow transition-colors">← TORNA ALLA HOME</a>
+				<div class="section-divider mb-8"></div>
+				<h1 class="text-4xl md:text-6xl font-heading mb-4">Casi Studio <span class="text-red">Privati</span></h1>
+				<p class="text-gray-300 text-lg mb-12">Risultati reali, dettagliati. Condivisi solo con chi lavora — o potrebbe lavorare — con me.</p>
+
+				<div class="grid sm:grid-cols-2 gap-6">
+					<a href="/casi-studio-privati/infissi-mm-group/" class="block p-6 bg-black-card border border-gray-700/50 hover:border-red/30 transition-colors group">
+						<p class="text-red font-heading text-sm tracking-widest mb-3">SERRAMENTI</p>
+						<h2 class="text-2xl font-heading mb-3 group-hover:text-red transition-colors">1 milione in 5 mesi. Partendo da zero.</h2>
+						<p class="text-gray-400 text-sm mb-4">M&amp;M Group — ROI ×100 con 50€/giorno di budget.</p>
+						<span class="text-amber text-sm font-heading tracking-widest">LEGGI →</span>
+					</a>
+					<a href="/casi-studio-privati/confronto-agenzia/" class="block p-6 bg-black-card border border-gray-700/50 hover:border-red/30 transition-colors group">
+						<p class="text-red font-heading text-sm tracking-widest mb-3">SERRAMENTI</p>
+						<h2 class="text-2xl font-heading mb-3 group-hover:text-red transition-colors">Quando si scambia la strategia con la scorciatoia.</h2>
+						<p class="text-gray-400 text-sm mb-4">Un cliente testa un'agenzia esterna. I dati parlano chiaro.</p>
+						<span class="text-amber text-sm font-heading tracking-widest">LEGGI →</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script define:vars={{ PASSWORD }}>
+		const stored = localStorage.getItem('cs_privati_auth');
+		const locked = document.getElementById('locked');
+		const content = document.getElementById('content');
+
+		if (stored === PASSWORD) {
+			locked.classList.add('hidden');
+			content.classList.remove('hidden');
+		}
+
+		document.getElementById('pwd-form')?.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const val = document.getElementById('pwd-input').value;
+			if (val === PASSWORD) {
+				localStorage.setItem('cs_privati_auth', PASSWORD);
+				locked.classList.add('hidden');
+				content.classList.remove('hidden');
+			} else {
+				document.getElementById('pwd-error').classList.remove('hidden');
+			}
+		});
+	</script>
+
+</Layout>
